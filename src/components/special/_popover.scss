@@ -1,0 +1,66 @@
+section.popover {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  z-index: 0;
+  @extend .no-pam;
+}
+
+.cbox-popover {
+  display: none;
+}
+
+.cbox-popover + label {
+  cursor: pointer;
+  color: #000;
+  z-index: 0;
+}
+
+.cbox-popover + label:before {
+  background-color: grey;
+  width: 3em;
+  height: 3em;
+  border-radius: 2em;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  transition: all .2s;
+}
+
+.pp-card {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  padding: 3em;
+  background-color: grey;
+  color: white;
+  border-radius: .5em;
+  line-height: 1.5em;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transform: scale(.9) translateY(100%);
+}
+
+.pp-card--content {
+  opacity: 0;
+  transition: all .3s .3s;
+}
+
+.cbox-popover:checked + label:before {
+  background-color: tomato;
+  border-radius: 50%;
+}
+
+.cbox-popover:checked ~ .pp-card {
+  opacity: 1;
+  transition: all .2s .2s;
+  transform: scale(1) translateY(0);
+}
+
+.cbox-popover:checked ~ .pp-card .pp-card--content {
+  opacity: 1;
+
+}

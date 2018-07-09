@@ -1,0 +1,34 @@
+@mixin gradient($from, $to) {
+  $gradient-angle: 40deg;
+  /* fallback/image non-cover color */
+  background-color: $from;
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($gradient-angle, $from, $to);
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($gradient-angle, $from, $to);
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($gradient-angle, $from, $to);
+  color: #fff;
+  font-weight: 500;
+}
+
+@mixin gradient-border($from, $to) {
+  $gradient-angle: 45deg;
+  $border-image-prop: 2% stretch !important;
+  box-sizing: content-box;
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+  -webkit-border-image: -webkit-linear-gradient($gradient-angle, $from, $to) $border-image-prop;
+  -moz-border-image: -moz-linear-gradient($gradient-angle, $from, $to) $border-image-prop;
+  -o-border-image: -o-linear-gradient($gradient-angle, $from, $to) $border-image-prop;
+  border-image: linear-gradient($gradient-angle, $from, $to) $border-image-prop;
+}
+
+
+@mixin gradient-text($from, $to) {
+  $gradient-angle: 210deg;
+  background: -webkit-linear-gradient($gradient-angle, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

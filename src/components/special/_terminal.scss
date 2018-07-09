@@ -1,0 +1,47 @@
+.terminal {
+    
+    position: relative;
+    height: auto;
+    min-width: 200px;
+    padding: 40px 20px 20px;
+    margin: 20px 10px;
+    border-radius: 5px;
+    background: linear-gradient(#E8E6E8 21px, #000 20px);
+    @extend .z-depth-3;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    &:after{
+        position: absolute;
+    }
+
+    &:before {
+        position: absolute;
+        content: " ";
+        width: 10px;
+        height: 10px;
+        margin: -35px 0 0 -10px;
+        border-radius: 50px;
+        background: #fc625d;
+        -webkit-box-shadow: 0 0 0 1px #de413e, 15px 0 #fec041, 15px 0 0 1px #dda035, 30px 0 #35cc4b, 30px 0 0 1px #28aa36;
+        box-shadow: 0 0 0 1px #de413e, 15px 0 #fec041, 15px 0 0 1px #dda035, 30px 0 #35cc4b, 30px 0 0 1px #28aa36;
+    }
+
+    .header {
+        position: absolute;
+        width: 100%;
+        content: "Code View";
+        top: 0;
+        left: 0;
+        
+        text-align: center;
+        color: #000;
+        line-height: 20px;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.3em;
+        color: #2efa6e;
+    }
+}

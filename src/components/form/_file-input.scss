@@ -1,0 +1,103 @@
+/* File Input
+   ========================================================================== */
+ /* TODO:
+  * Javascript ile drag drop yap
+  */
+.file-field {
+  width: auto;
+  height: auto;
+  boz-sizing: border-box;
+
+  min-width: 300px;
+  min-height: 200px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  .file-input-wrapper{
+    border: $file-input-border;
+    border-radius: 1.5em;
+
+    padding: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s linear;
+
+    &:hover {
+      border-color: $file-input-border-color-hover;
+    }
+
+    .header {
+      text-align: center; 
+      font-size: 24px;
+      font-weight: 600;
+        color: $file-input-icon-color;
+
+      i {
+        font-size: 3em;
+        padding: 15px;
+        border-radius: 50px;
+        background-color: $file-input-icon-color;
+        color: white;
+        
+        transition: all 0.3s linear;
+      }
+    }
+    .input-button {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      cursor: pointer;
+      position: absolute; 
+      top: 0;
+      left: 0;
+      width: 100%; height: 100%;
+          // Needed to override webkit button
+      &::-webkit-file-upload-button {
+        display: none;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:hover {
+        color: red;
+        & ~ .header {
+          i.hoverable {
+            text-shadow: 3px 3px 5px darken( $file-input-icon-color, 7%);
+            box-shadow: 3px 3px 5px darken( $file-input-icon-color, 7%);
+          }
+        }
+      }
+    }
+  }
+    input[type="submit"] {
+      margin: 20px;
+    }
+}

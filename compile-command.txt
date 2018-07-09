@@ -1,0 +1,9 @@
+sass hbt-ui.scss hbt-ui.css
+sass --watch hbt-ui.scss:hbt-ui.css
+sass --watch hbt-ui.scss:../css/hbt-ui.css
+sass --watch hbt-ui.scss:../css/hbt-ui.css --style compressed
+
+
+#compress and store
+fyComp -i hbt-ui-css/ -o _BACKUPs/hbt-ui-css -v
+fyComp -i hbt-ui-css/ -o "_BACKUPs/hbt-css-devkit/hbt-ui-css" -c "Bu oylesine bir savedir"

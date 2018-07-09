@@ -1,0 +1,297 @@
+// Utility Color Classes
+
+$red: (
+  "base":       #F44336,
+  "lighten-5":  #FFEBEE,
+  "lighten-4":  #FFCDD2,
+  "lighten-3":  #EF9A9A,
+  "lighten-2":  #E57373,
+  "lighten-1":  #EF5350,
+  "darken-1":   #E53935,
+  "darken-2":   #D32F2F,
+  "darken-3":   #C62828,
+  "darken-4":   #B71C1C,
+  "accent-1":   #FF8A80,
+  "accent-2":   #FF5252,
+  "accent-3":   #FF1744,
+  "accent-4":   #D50000
+);
+
+
+$indigo: (
+  "base":       #3f51b5,
+  "lighten-5":  #e8eaf6,
+  "lighten-4":  #c5cae9,
+  "lighten-3":  #9fa8da,
+  "lighten-2":  #7986cb,
+  "lighten-1":  #5c6bc0,
+  "darken-1":   #3949ab,
+  "darken-2":   #303f9f,
+  "darken-3":   #283593,
+  "darken-4":   #1a237e,
+  "accent-1":   #8c9eff,
+  "accent-2":   #536dfe,
+  "accent-3":   #3d5afe,
+  "accent-4":   #304ffe
+);
+
+$blue: (
+  "base":       #2196F3,
+  "lighten-5":  #E3F2FD,
+  "lighten-4":  #BBDEFB,
+  "lighten-3":  #90CAF9,
+  "lighten-2":  #64B5F6,
+  "lighten-1":  #42A5F5,
+  "darken-1":   #1E88E5,
+  "darken-2":   #1976D2,
+  "darken-3":   #1565C0,
+  "darken-4":   #0D47A1,
+  "accent-1":   #82B1FF,
+  "accent-2":   #448AFF,
+  "accent-3":   #2979FF,
+  "accent-4":   #2962FF
+);
+
+$light-blue: (
+  "base":       #03a9f4,
+  "lighten-5":  #e1f5fe,
+  "lighten-4":  #b3e5fc,
+  "lighten-3":  #81d4fa,
+  "lighten-2":  #4fc3f7,
+  "lighten-1":  #29b6f6,
+  "darken-1":   #039be5,
+  "darken-2":   #0288d1,
+  "darken-3":   #0277bd,
+  "darken-4":   #01579b,
+  "accent-1":   #80d8ff,
+  "accent-2":   #40c4ff,
+  "accent-3":   #00b0ff,
+  "accent-4":   #0091ea
+);
+
+$cyan: (
+  "base":       #00bcd4,
+  "lighten-5":  #e0f7fa,
+  "lighten-4":  #b2ebf2,
+  "lighten-3":  #80deea,
+  "lighten-2":  #4dd0e1,
+  "lighten-1":  #26c6da,
+  "darken-1":   #00acc1,
+  "darken-2":   #0097a7,
+  "darken-3":   #00838f,
+  "darken-4":   #006064,
+  "accent-1":    #84ffff,
+  "accent-2":    #18ffff,
+  "accent-3":    #00e5ff,
+  "accent-4":    #00b8d4
+);
+
+$lime: (
+  "base":       #cddc39,
+  "lighten-5":  #f9fbe7,
+  "lighten-4":  #f0f4c3,
+  "lighten-3":  #e6ee9c,
+  "lighten-2":  #dce775,
+  "lighten-1":  #d4e157,
+  "darken-1":   #c0ca33,
+  "darken-2":   #afb42b,
+  "darken-3":   #9e9d24,
+  "darken-4":   #827717,
+  "accent-1":    #f4ff81,
+  "accent-2":    #eeff41,
+  "accent-3":    #c6ff00,
+  "accent-4":    #aeea00
+);
+
+$amber: (
+  "base":       #ffc107,
+  "lighten-5":  #fff8e1,
+  "lighten-4":  #ffecb3,
+  "lighten-3":  #ffe082,
+  "lighten-2":  #ffd54f,
+  "lighten-1":  #ffca28,
+  "darken-1":   #ffb300,
+  "darken-2":   #ffa000,
+  "darken-3":   #ff8f00,
+  "darken-4":   #ff6f00,
+  "accent-1":   #ffe57f,
+  "accent-2":   #ffd740,
+  "accent-3":   #ffc400,
+  "accent-4":   #ffab00
+);
+
+$blue-grey: (
+  "base":       #607d8b,
+  "lighten-5":  #eceff1,
+  "lighten-4":  #cfd8dc,
+  "lighten-3":  #b0bec5,
+  "lighten-2":  #90a4ae,
+  "lighten-1":  #78909c,
+  "darken-1":   #546e7a,
+  "darken-2":   #455a64,
+  "darken-3":   #37474f,
+  "darken-4":   #263238
+);
+
+$grey: (
+  "base":       #9e9e9e,
+  "lighten-5":  #fafafa,
+  "lighten-4":  #f5f5f5,
+  "lighten-3":  #eeeeee,
+  "lighten-2":  #e0e0e0,
+  "lighten-1":  #bdbdbd,
+  "darken-1":   #757575,
+  "darken-2":   #616161,
+  "darken-3":   #424242,
+  "darken-4":   #212121
+);
+
+$shades: (
+  "black":        #000000,
+  "white":        #FFFFFF,
+  "transparent":  transparent
+);
+
+$hbtpzr: (
+  "base": #558C89,
+  "nice-blue":  #4285f4,
+  "nice-yellow": #CA7C4E,
+  "nice-brown": #786450,
+  "nice-blue-2": #3367D6
+);
+
+$states: (
+  "success": #00C851,
+  "success-dark": #007E33,
+  "info": #33b5e5,
+  "info-dark": #0099CC,
+  "warning": #ffbb33,
+  "warning-dark": #FF8800,
+  "danger": #ff4444,
+  "danger-dark": #CC0000
+);
+
+$semantic: (
+  "red   "         : #B03060,
+  "orange"         : #FE9A76,
+  "yellow"         : #FFD700,
+  "olive "         : #32CD32,
+  "green "         : #016936,
+  "teal  "         : #008080,
+  "blue  "         : #0E6EB8,
+  "violet"         : #EE82EE,
+  "purple"         : #B413EC,
+  "pink  "         : #FF1493,
+  "brown "         : #A52A2A,
+  "grey  "         : #A0A0A0,
+  "black "         : #000000
+
+);
+
+
+/* written by furkan yilmaz 15.02.18 */
+$gradients : (
+  "peach" :  (#ffd86f: #fc6262),
+  "purple" : (#ff6ec4: #7873f5),
+  "blue" :   (rgb(69, 202, 252): rgb(48, 63, 159)),
+  "aqua" :   (#2096ff: #05ffa3),
+  "miami" :   (#5f2c82: #4285f4),
+  "poncho" :   (#8C6D82: #E5798B),
+  "virgin" :   (#FFB7BF: #FF3A51),
+  "calm" :   (#9700FF: #FF6CEB),
+  "superman": (#27FF89: #5ED000),
+  "amber" : ( #ff6f00: #ffca28),
+  "purple2orange": (#8e24aa: #ff6e40),
+  "blue-light": (#0288d1: #26c6da)
+
+) !default;
+
+$colors: (
+
+  "red":            $red,
+  "indigo":         $indigo,
+  "blue":           $blue,
+  "light-blue":     $light-blue,
+  "cyan":           $cyan,
+  "lime":           $lime,
+  "amber":          $amber,
+  "blue-grey":      $blue-grey,
+  "grey":           $grey,
+  "shades":         $shades,
+  "hbtpzr-color":   $hbtpzr,
+  "state-color":    $states,
+  "semantic-color": $semantic
+) !default;
+
+
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else if $color_name != "shades" {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+// Shade classes
+@each $color, $color_value in $shades {
+  .#{$color} {
+    background-color: $color_value !important;
+  }
+  .#{$color}-text {
+    color: $color_value !important;
+  }
+}
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
+  @return null;
+}
+
+/* written by furkan yilmaz 15.02.18 */
+
+
+@each $name, $value in $gradients {
+  @each $from, $to in $value {
+    .#{$name}-gradient {
+       @include gradient($from, $to);
+    }
+    .#{$name}-gradient-reverse {
+       @include gradient($to, $from);
+    }
+    .#{$name}-gradient-text {
+       @include gradient-text($from, $to);
+    }
+        .#{$name}-gradient-text-reverse {
+       @include gradient-text($to, $from);
+    }
+    .btn-flat.#{$name}-gradient-border {
+       @include gradient-border($from, $to);
+    }
+  }
+}

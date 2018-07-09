@@ -1,0 +1,26 @@
+.browser-container {
+    position: relative;
+    margin: 20px 10px;
+    overflow: auto;
+    background: white;
+    height: auto;
+  }
+  
+  .browser-frame {
+    padding: 20px;
+    padding-top: 46px;
+    border-radius: 5px;
+    overflow: hidden;
+    @extend .z-depth-3;
+  }
+  
+  .browser-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: solid;
+    border-width: 38px 146px 0 201px;
+    border-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/131442/browser-chrome.png") 100% 146 0 201 repeat;
+  }

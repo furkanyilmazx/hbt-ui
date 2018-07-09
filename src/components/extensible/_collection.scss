@@ -1,0 +1,182 @@
+// Collections
+.collection, .tree {
+  margin: $collection-margin-top 0 $collection-margin-bottom 0;
+  border: 1px solid $collection-border-color;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+
+  .collection-item {
+    background-color: $collection-bg-color;
+    line-height: $collection-line-height;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid $collection-border-color;
+    display: block;
+
+    // Avatar Collection
+    &.avatar {
+      min-height: 72px;
+      padding-left: 56px;
+      position: relative;
+
+      // Don't style circles inside preloader classes.
+      &:not(.circle-clipper) > .circle,
+      :not(.circle-clipper) > .circle {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+        left: 12px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      i.circle {
+        font-size: 16px;
+        line-height: 36px;
+        color: #fff;
+        background-color: #999;
+        text-align: center;
+      }
+
+
+      .title {
+        font-size: 16px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .secondary-content {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+
+    }
+
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active {
+      background-color: $collection-active-bg-color;
+      color: $collection-active-color;
+
+      .secondary-content {
+        color: #fff;
+      }
+    }
+  }
+
+  a.collection-item,
+  button.collection-item {
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: .35s;
+    color: $collection-link-color;
+
+    min-height: 36px;
+
+    padding:0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+
+    flex-direction: row;
+
+      align-items: center;
+
+
+    &.center {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    &.justified {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    &.left{
+      text-align: left;
+    }
+
+    &:not(.active) {
+      &:hover {
+        background-color: $collection-hover-bg-color;
+      }
+      &:active {
+        background-color: darken($collection-hover-bg-color, 10%);
+      }
+    }
+
+    span {
+      margin: 0 5px;
+    }
+
+    i,
+    i.material-icons {
+      background-color: darken($collection-hover-bg-color, 10%);
+      margin-right: 5px;
+      height: 32px;
+      line-height: 32px;
+      padding: 0px 5px;
+      font-size: 20px;
+
+
+      &.circle {
+
+        border-radius: 50%;
+        box-shadow: 0 2px 15px 1px rgba(0,0,0,.16);
+        margin-left: 5px;
+        margin: 2px;
+
+        &:hover {
+          box-shadow: 0 2px 15px 1px rgba(255,255,255,0.5);
+
+        }
+      }
+
+    }
+  }
+
+
+  &.with-header {
+    .collection-header {
+      background-color: $collection-bg-color;
+      border-bottom: 1px solid $collection-border-color;
+      padding: 10px 20px;
+    }
+    .collection-item {
+      padding-left: 30px;
+    }
+    .collection-item.avatar {
+      padding-left: 72px;
+    }
+  }
+
+}
+// Made less specific to allow easier overriding
+.secondary-content {
+  float: right;
+  color: $bg-color-secondary;
+}
+.collapsible .collection {
+  margin: 0;
+  border: none;
+}

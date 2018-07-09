@@ -1,0 +1,96 @@
+$label-size: 20px;
+$label-margin: 15px;
+$label-before-size: 20px;
+
+$color-light: white;
+$color-brand: #2196F3;
+$color-font: rgba(black, .54);
+
+$font-size-md: 14px;
+$font-size-lg: 24px;
+$font-size-xl: 54px;
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 500;
+
+$check-sign-width: 8px;
+
+
+.checkbox-menu-input {
+  display: none;
+}
+
+.checkbox-menu-label, .checkbox-menu-text, .checkbox-menu-text--description {
+  transition: all .2s ease;
+}
+
+.checkbox-menu-label {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+  padding: $label-size/2 $label-size;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  font-weight: $font-normal;
+  margin: $label-margin 0;
+  border: 1px solid darken($color-light, 15%);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 0 $color-brand;
+  
+  &:before {
+
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 20px;
+    opacity: 0;
+    transform: translate(0%, -50%);
+    transition: all .3s ease-out;
+    width: 22px;
+    height: 42px;
+    border-right: $check-sign-width solid $color-brand;
+    border-bottom: $check-sign-width solid $color-brand;
+    border-top: $check-sign-width solid transparent;
+    border-left: $check-sign-width solid transparent;
+    transform: rotate(40deg);
+    backface-visibility: hidden;
+    transform-origin: 100% 100%;
+  }
+}
+
+.checkbox-menu-text {
+  &--title {
+    font-weight: $font-bold;
+  }
+  &--description {
+    font-size: $font-size-md;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid $color-brand;
+    .un {
+      display: none;
+    }
+  }
+}
+
+.checkbox-menu-input:checked + .checkbox-menu-label {
+  border-color: $color-brand;
+  box-shadow: inset 0 -5px 0 0 $color-brand;
+  &:before {
+    top: 8px;
+    right: 37px;
+    opacity: 1;
+  }
+  
+  & .checkbox-menu-text {
+    transform: translate(0, -5px);
+    &--description {
+      border-color: darken($color-light, 15%);
+      .un {
+        display: inline-block;
+      }
+    }
+  }
+
+}

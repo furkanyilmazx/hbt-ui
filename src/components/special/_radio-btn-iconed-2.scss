@@ -1,0 +1,60 @@
+.radio-btn-2-wrapper label {
+	cursor: pointer;
+	position: relative;
+	margin: 20px 5px;
+
+	@extend .no-selectable-text;
+
+	& + label {
+		margin-left: 5px;
+	}
+
+	&:hover::before{
+		content: attr(for);
+		font-family: Roboto, -apple-system, sans-serif;
+		text-transform: capitalize;
+		font-size: 11px;
+		position: absolute;
+		top: 105%;
+		left: 0;
+		right: 0;
+		opacity: 0.75;
+		background-color: #323232;
+		color: #fff;	
+		padding: 5px;
+		border-radius: 3px;
+	  	display: block;
+	}
+}
+
+input[type="radio"]{
+
+	&.radio-btn-2{
+		opacity: 0; /* hidden but still tabable */
+		position: absolute;
+
+		& + i {
+			font-family: 'Material Icons';
+			color: #B3CEFB;
+			border-radius: 50%;
+			padding: 12px;
+			transition: all 0.4s;
+			-webkit-transition: all 0.4s;
+			@extend .no-selectable-text;
+		}
+	}
+
+	&:checked {
+		&.radio-btn-2 + i {
+			color: #D9E7FD;
+		  	background-color: #4285F4;
+		}
+	}
+
+	&:focus{
+		&.radio-btn-2 + i {
+			color: #fff;
+		}
+	}
+
+}

@@ -1,0 +1,222 @@
+nav {
+
+  color: $navbar-font-color;
+  @extend .z-depth-1;
+  background-color: $navbar-bg-color;
+  width: 100%;
+  height: $navbar-mobile-height;
+  line-height: $navbar-mobile-line-height;
+  font-weight: 600;
+
+  a { color: $navbar-font-color; }
+
+  i,
+  i.material-icons,
+  i.fas, i.fab, i.fal {
+    display: block;
+    font-size: $navbar-icon-size;
+    height: $navbar-mobile-height;
+    line-height: $navbar-mobile-line-height;
+
+    &.shadowed {
+      text-shadow: 1px 1px darken($navbar-icon-shadow-color, 10%);
+    }
+  }
+
+  i.fas, i.fab, i.fal {
+    font-size: 1.3em;
+  }
+
+  .nav-wrapper {
+    position: relative;
+    height: 100%;
+    padding-left: 20px;
+
+    input[type="search"] {
+      width: 100%;
+      margin-left: 3.2em;
+      &:focus {
+        width: 100%;
+      }
+    }
+  }
+
+  @media #{$large-and-up} {
+    a.button-collapse { display: none; }
+  }
+
+
+  // Collapse button
+  .button-collapse {
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: $navbar-mobile-height;
+    margin: 0 18px;
+
+    i {
+      height: $navbar-mobile-height;
+      line-height: $navbar-mobile-line-height;
+    }
+  }
+
+
+  // Logo
+  .brand-logo {
+    position: absolute;
+    color: $navbar-font-color;
+    display: inline-block;
+    font-size: $navbar-brand-font-size;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 600;
+    padding: 0;
+
+
+    &.center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media #{$medium-and-down} {
+      left: 50%;
+      transform: translateX(-50%);
+
+      &.left, &.right {
+        padding: 0;
+        transform: none;
+      }
+
+      &.left { left: 0.5rem; }
+      &.right {
+        right: 0.5rem;
+        left: auto;
+      }
+    }
+
+    &.right {
+      right: 0.5rem;
+      padding: 0;
+    }
+
+    i,
+    [class^="mdi-"], [class*="mdi-"],
+    i.material-icons,
+    i.fas, i.fab, i.fal {
+      float: left;
+      margin-right: 15px;
+    }
+  }
+
+  // Navbar Links
+  ul {
+    margin: 0;
+
+    li {
+      transition: background-color .3s;
+      float: left;
+      padding: 0;
+
+      &.active {
+        background-color: rgba(0,0,0,.1);
+      }
+
+    }
+    a {
+      transition: background-color .3s;
+      font-size: $navbar-font-size;
+      color: $navbar-font-color;
+      display: block;
+      padding: 0 15px;
+      cursor: pointer;
+      height: 100%;
+      &.btn, &.btn-large, &.btn-flat, &.btn-floating {
+        margin-top: -3px;
+        color: $navbar-font-color;
+        padding: 0 15px;
+        & > i.material-icons,
+        & > i.fas, & > i.fab, & > i.fal{
+          font-size:  $navbar-icon-size;
+          height: inherit;
+          line-height: inherit;
+          margin: 0;
+        }
+
+      }
+
+      i.left,i.left.material-icons{
+        margin-right: 5px;
+      }
+
+      i.right,i.right.material-icons{
+        margin-left: 5px;
+      }
+
+      &:hover {
+        background-color: rgba(0,0,0,.1);
+      }
+
+      &.profile-image {
+        padding: 0 3px;
+        vertical-align: middle;
+        line-height: $navbar-mobile-height;
+        height: $navbar-mobile-height;
+        span {
+           float: right;
+           font-size: 1.1em;
+           font-weight: 5x00;
+          font-family: 'Comfortaa', cursive;
+          margin-right: 10px;
+        }
+
+      }
+
+      img {
+        width: $navbar-height;
+        height: $navbar-mobile-height;
+        padding: 7px;
+        border-radius: 50%;
+        display: inline-block;
+
+      }
+
+    }
+
+    &.left {
+      position: absolute;
+      left: 0;
+    }
+    &.right {
+      position: absolute;
+      right: 0;
+    }
+    &.center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  // Fixed Navbar
+  &.navbar-fixed {
+    position: fixed;
+    z-index: 5;
+    &.top{
+      top: 0;
+      left: 0;
+    }
+
+  }
+}
+
+@media #{$medium-and-up} {
+  nav.nav-extended .nav-wrapper {
+    min-height: $navbar-height;
+  }
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: $navbar-height;
+    line-height: $navbar-line-height;
+  }
+  .navbar-fixed {
+    height: $navbar-height;
+  }
+}

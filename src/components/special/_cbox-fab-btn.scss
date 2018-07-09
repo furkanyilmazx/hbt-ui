@@ -1,0 +1,86 @@
+$fab-btn-width: 4em;
+$fab-btn-item-width: 1.1em;
+
+.checkbox-fab-btn {
+	display: none;
+
+	& + label{
+		cursor: pointer;
+		position: absolute;
+		right: 1em; 
+		bottom: 1em;
+		background-color: tomato;
+		height: $fab-btn-width; 
+		width: $fab-btn-width;
+		border-radius: 50%;
+		z-index: 2;
+
+
+		&:before, &:after {
+			position: absolute;
+			content: '';
+			height: calc(#{$fab-btn-width} / 2 );
+			width: .3em;
+			background-color: #fff;
+			top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+			border-radius: 50%;
+			transition: all .25s;
+		}
+		&:before {
+			height: calc(#{$fab-btn-width} / 2 );
+			width: .3em;
+		}
+		&:after {
+			width: calc(#{$fab-btn-width} / 2 );
+			height: .3em;
+		}
+	}
+
+	&:checked {
+		& + label:before, & + label:after{
+			transform: rotatez(-45deg);
+		}
+
+		& ~ .one,
+		& ~ .two,
+		& ~ .three {
+			opacity: 0.8;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+		& ~ .one{
+			background-color: purple;
+			transform: translateX(-5em);
+			transition-delay: .2s;
+		}
+		& ~ .two{
+			background-color: slateblue;
+			transform: translateX(-3.5em) translateY(-3.5em);
+			transition-delay: .1s;			
+		}
+		& ~ .three{
+			background-color: mediumorchid;
+			transform: translateY(-5em);
+		}
+
+	}
+}
+
+.one, .two, .three {
+  cursor: pointer;
+  position: absolute;
+  right: 0.75em; 
+  bottom: 0.75em;
+  padding: $fab-btn-item-width;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+  transform: rotateZ(90deg);
+  font-size: $fab-btn-item-width;
+  color: #fff;
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.1, 0.885, 0.32, 1.1);
+}

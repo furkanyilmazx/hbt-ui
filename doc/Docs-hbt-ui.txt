@@ -1,0 +1,71 @@
+Documentations:
+
+----------------
+-- breadcrumb --
+----------------
+# .none-seperator sinifi aradaki ayraci yok eder.
+# Ornek olarak:
+
+		<div class="breadcrumb">
+			<a href="#!">First</a>
+			<a href="#!">Second</a>
+			<a href="#!">Third</a>
+		</div>
+
+-----------------------------------------------------
+
+
+----------------
+-- pagination --
+----------------
+#	.circle sinifi yuvarlak yapar
+# 	Ornek olarak:
+
+		<ul class="pagination circle">
+			<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+			<li class="active"><a href="#!">1</a></li>
+			<li class="active"><a href="#!">2</a></li>
+			<li><a href="#!">3</a></li>
+			<li><a href="#!">4</a></li>
+			<li><a href="#!">5</a></li>
+			<li><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+		</ul>
+		
+-----------------------------------------------------
+
+----------------
+-- table --
+----------------
+#	thead .shadowed sinifi eklenebilir.
+#	table .shadowed sinifi eklenebilir.
+# 	Ornek olarak:
+
+	<table class="bordered shadowed highlight">
+		<thead class="state-color info shadowed white-text">
+		  <tr>
+		      <th>Name</th>
+		      <th>Item Name</th>
+		      <th>Item Price</th>
+		  </tr>
+		</thead>
+
+		<tbody>
+		  <tr>
+		    <td>Alvin</td>
+		    <td>Eclair</td>
+		    <td>$0.87</td>
+		  </tr>
+		  <tr>
+		    <td>Alan</td>
+		    <td>Jellybean</td>
+		    <td>$3.76</td>
+		  </tr>
+		  <tr>
+		    <td>Jonathan</td>
+		    <td>Lollipop</td>
+		    <td>$7.00</td>
+		  </tr>
+		</tbody>
+	</table>
+		
+-----------------------------------------------------

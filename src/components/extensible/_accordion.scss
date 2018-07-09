@@ -1,0 +1,81 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
+.accordion-wrapper{
+	transform: translateZ(0);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: all 0.2s linear;
+  @extend .z-depth-5;
+
+}
+
+.accordion-wrapper > .accordion-toggle{
+	opacity: 0;
+	display: none;
+}
+
+.accordion-wrapper > label{
+	position: relative;
+	display: block;
+  padding: 10px 20px;
+  min-height: 36px;
+	font-size: 1em;
+	border-top: 1px solid #ddd;
+	background: #fff;
+  cursor: pointer;
+  color: $collection-link-color;
+  @extend .no-selectable-text;
+
+  &:hover {
+    background-color: $collection-hover-bg-color;
+  }
+}
+
+.accordion-wrapper > label:after {
+  content: '\f078';
+  position: absolute;
+  line-height: 2.8em;
+  top: 0px;
+  right: 20px;
+  font-family: fontawesome;
+  transform: rotate(90deg);
+  transition: all 0.2s linear;
+  color: $collection-link-color;
+}
+
+.accordion-wrapper > section{
+	height: 0;
+	transition: all 0.2s linear;
+	overflow: hidden;
+}
+
+.accordion-wrapper > .accordion-toggle:checked ~ label:after{
+ transform: rotate(0deg);
+}
+
+.accordion-wrapper > .accordion-toggle:checked ~ section{
+  height: auto;
+  transition: all 0.2s linear;
+}
+
+.accordion-wrapper > section {
+  p {
+    margin: 25px 0;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    transition: all 0.2s linear;
+  }
+  a{
+    display: block;
+    padding: 10px 40px;
+    min-height: 36px;
+    font-size: 1em;
+    background: #fff;
+    color: $collection-link-color;
+    cursor: pointer;
+  }
+  a:hover {
+    background-color: $collection-hover-bg-color;
+  }
+}

@@ -1,0 +1,52 @@
+// Breadcrumbs
+.breadcrumb a{
+  font-size: $breadcrumb-font-size;
+  color: $breadcrumb-default-color;
+  margin-right: 6px;
+  display: inline-block;
+
+  i,
+  [class^="mdi-"], [class*="mdi-"],
+  i.material-icons {
+    display: inline-block;
+    float: left;
+    font-size: $breadcrumb-font-size;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 5px;
+    line-height: 1em;
+  }
+
+  &:before {
+    content: '\003E';
+    color: $breadcrumb-default-color;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: $breadcrumb-seperator-font-size;
+    margin: 0 8px 0 0px;
+    -webkit-font-smoothing: antialiased;
+    height: 1.5em;
+  }
+
+  &.none-seperator:before {
+    content: "";
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  &:last-child {
+    color:  $breadcrumb-active-color;
+    padding-right: 6px;
+    text-decoration: underline;
+  }
+  &:last-child:before {
+    height: 1.5em;
+    padding-right: 6px;
+  }
+
+}

@@ -1,0 +1,83 @@
+/*
+ * Author: Furkan YILMAZ
+ * Date: 13.02.2018
+ *
+ *
+ *
+ */
+
+.flex{
+
+	box-sizing: border-box;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	&.fx-row,
+	.fx-row	{
+
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+
+	&.fx-column,
+	.fx-column{
+		
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+
+	&.flex-v-top {
+		align-items: flex-start;
+	}
+	&.flex-v-center {
+		align-items: center;
+	}
+	&.flex-v-bottom {
+		align-items: flex-end;
+	}
+	&.flex-v-stretch {
+		align-items: stretch;
+	}
+
+
+
+	&.flex-h-start {
+		-webkit-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+	&.flex-h-center {
+		-webkit-box-pack: center;
+		-webkit-justify-content: flex-center;
+		-ms-flex-pack: center;
+		justify-content: flex-center
+	}
+	&.flex-h-end {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	}
+	&.flex-h-justify {
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+	
+}
+

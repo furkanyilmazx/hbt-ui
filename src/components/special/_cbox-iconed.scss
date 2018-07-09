@@ -1,0 +1,62 @@
+.checkbox-iconed{
+  display: flex; 
+      -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    float:left;
+
+    &:after {
+      content: "";
+      clear: both;
+    }
+}
+
+.checkbox-iconed-input {
+  display: none;
+}
+
+.checkbox-iconed-label {
+  border-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 5px;
+  //border: 2px solid darken($color-light, 15%);
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.2s linear;
+
+
+  @extend .no-selectable-text;
+
+
+  i{
+    display: block;
+    line-height: 2.1em;
+    font-size: 1.5em;
+    transition: all 0.25s cubic-bezier(0.8, 0, 0, 8);
+  }
+}
+
+.checkbox-iconed-input:checked + .checkbox-iconed-label {
+  border-color: $cbox-iconed-checked-border-color;
+  transform: scale(1.1);
+
+  @each $name, $value in $gradients {
+    @each $from, $to in $value {
+      &.#{$name}-ch {
+         @include gradient($from, $to);
+      }
+    }
+  }
+
+  i{
+    color: $cbox-iconed-checked-bg-color;
+    transform: scale(1.2);
+  }
+
+}
